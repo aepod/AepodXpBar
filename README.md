@@ -32,7 +32,7 @@ A BepInEx mod for [Erenshor](https://store.steampowered.com/app/2382520/Erenshor
 
 Requires [BepInEx 5.4.x](https://docs.bepinex.dev/articles/user_guide/installation/index.html) for Unity Mono.
 
-1. Extract `AepodXpBar.dll` into your `Erenshor/BepInEx/plugins/` folder
+1. Drop `AepodXpBar.dll` into your `BepInEx/plugins/` folder
 2. Launch the game -- a config file will be generated at `BepInEx/config/com.aepod.erenshor.xpbar.cfg`
 
 ## Configuration

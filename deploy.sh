@@ -49,33 +49,28 @@ if $PACKAGE_MODE; then
 
     rm -f "$ZIP_PATH"
 
-    # Stage with BepInEx folder structure so users can extract at game root
+    # Stage flat -- DLL + README at zip root
     STAGING="$DIST_DIR/staging"
     rm -rf "$STAGING"
-    mkdir -p "$STAGING/BepInEx/plugins"
+    mkdir -p "$STAGING"
 
-    echo "  BepInEx/plugins/$DLL_NAME"
-    cp "$DLL_PATH" "$STAGING/BepInEx/plugins/$DLL_NAME"
+    echo "  $DLL_NAME"
+    cp "$DLL_PATH" "$STAGING/$DLL_NAME"
 
-    # README at zip root
     if [ -f "$SCRIPT_DIR/README.md" ]; then
         echo "  README.md"
         cp "$SCRIPT_DIR/README.md" "$STAGING/README.md"
     fi
 
-    # Create zip
     echo ""
     echo "Creating $ZIP_NAME..."
     (cd "$STAGING" && zip -r "$ZIP_PATH" .)
 
-    # Clean staging
     rm -rf "$STAGING"
 
     echo ""
     echo "=== Package created ==="
     echo "  $(ls -lh "$ZIP_PATH" | awk '{print $5, $NF}')"
-    echo ""
-    echo "Install: extract zip at Erenshor game root (BepInEx/plugins/ structure included)"
     exit 0
 fi
 
