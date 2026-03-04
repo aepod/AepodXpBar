@@ -14,7 +14,7 @@ namespace AepodXpBar
     {
         public const string GUID = "com.aepod.erenshor.xpbar";
         public const string NAME = "AepodXpBar";
-        public const string VERSION = "1.0.0";
+        public const string VERSION = "0.3.1";
 
         public static new ManualLogSource Logger;
 

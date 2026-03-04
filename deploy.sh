@@ -15,7 +15,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DLL_NAME="AepodXpBar.dll"
 DLL_PATH="$SCRIPT_DIR/bin/Debug/netstandard2.1/$DLL_NAME"
-MOD_VERSION="1.0.0"
+MOD_VERSION="0.3.1"
 
 # Parse flags
 PACKAGE_MODE=false
