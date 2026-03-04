@@ -74,6 +74,10 @@ dotnet build AepodXpBar.csproj \
   -p:CorlibPath="$ErenshorGamePath/Erenshor_Data/Managed"
 ```
 
+## Source
+
+https://github.com/aepod/AepodXpBar
+
 ## License
 
 MIT
